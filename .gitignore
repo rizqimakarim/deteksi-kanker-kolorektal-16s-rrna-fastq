@@ -1,0 +1,9 @@
+# FASTQ mentah 4,5 GB: terlalu besar untuk GitHub. Notebook mengunduhnya sendiri dari ENA (PRJNA290926) + cek MD5.
+data/fastq/
+*.part
+# Arsip duplikat dari folder hasil_proyek2/
+hasil_proyek2.zip
+# Catatan pribadi rencana perubahan
+catatan.md
+.ipynb_checkpoints/
+__pycache__/

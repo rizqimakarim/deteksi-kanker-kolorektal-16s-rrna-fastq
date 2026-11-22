@@ -1,0 +1,37 @@
+{
+  "dataset": "PRJNA290926",
+  "data_format": "FASTQ (R1+R2 utuh, gzip), MD5 ENA terverifikasi",
+  "n_fastq_files": 584,
+  "fastq_total_gb": 4.48,
+  "samples_cohort": 292,
+  "samples_analyzed": 292,
+  "class_counts": {
+    "normal": 172,
+    "cancer": 120
+  },
+  "parameters": {
+    "TRUNC_LEN": 200,
+    "MAX_EE": 2.0,
+    "RAREFY_DEPTH": 10000,
+    "KMER_K": 6,
+    "MIN_PREVALENCE": 0.1,
+    "SEED": 42
+  },
+  "reference": {
+    "url": "https://ftp.ncbi.nlm.nih.gov/refseq/TargetedLoci/Bacteria/bacteria.16SrRNA.fna.gz",
+    "sha256": "fd5b6fb1181f2540f1717017c1447a385287d53f6790abd28753b3ae4477c891",
+    "v4_references": 25368
+  },
+  "validation": "stratified 80/20 hold-out + nested 5-fold CV",
+  "library_versions": {
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.10.7",
+    "seaborn": "0.13.2",
+    "joblib": "1.5.2"
+  },
+  "completed_utc": "2026-11-05T12:28:07.923205+00:00"
+}

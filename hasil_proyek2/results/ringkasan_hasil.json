@@ -1,0 +1,193 @@
+{
+  "sampel_dianalisis": 292,
+  "kelas": {
+    "normal": 172,
+    "cancer": 120
+  },
+  "read_R1_total": 16113186,
+  "rerata_pct_lolos_filter": 96.69,
+  "ESV_setelah_filter_global": 12192,
+  "genus_terklasifikasi": 280,
+  "MannWhitney_genus": {
+    "diuji": 169,
+    "FDR005": 10,
+    "signifikan": [
+      "Peptostreptococcus",
+      "Porphyromonas",
+      "Parvimonas",
+      "Fusobacterium",
+      "Haemophilus",
+      "Evtepia",
+      "Gemella",
+      "Massiliprevotella",
+      "Klebsiella",
+      "Agathobaculum/Butyricicoccus"
+    ]
+  },
+  "MannWhitney_ESV": {
+    "diuji": 1878,
+    "FDR005": 76
+  },
+  "PCA_PC1_PC2": [
+    0.0614,
+    0.058
+  ],
+  "KMeans_k2_ARI": -0.0183,
+  "test_set": [
+    {
+      "Fitur": "ESV",
+      "Model": "Logistic Regression",
+      "Accuracy": 0.5932,
+      "Precision_cancer": 0.5,
+      "Recall_cancer": 0.5833,
+      "F1_cancer": 0.5385,
+      "Specificity": 0.6,
+      "Balanced_accuracy": 0.5917,
+      "ROC_AUC": 0.6738,
+      "PR_AUC": 0.5739
+    },
+    {
+      "Fitur": "ESV",
+      "Model": "Random Forest",
+      "Accuracy": 0.6949,
+      "Precision_cancer": 0.6364,
+      "Recall_cancer": 0.5833,
+      "F1_cancer": 0.6087,
+      "Specificity": 0.7714,
+      "Balanced_accuracy": 0.6774,
+      "ROC_AUC": 0.6667,
+      "PR_AUC": 0.6497
+    },
+    {
+      "Fitur": "Genus",
+      "Model": "Logistic Regression",
+      "Accuracy": 0.6102,
+      "Precision_cancer": 0.52,
+      "Recall_cancer": 0.5417,
+      "F1_cancer": 0.5306,
+      "Specificity": 0.6571,
+      "Balanced_accuracy": 0.5994,
+      "ROC_AUC": 0.7202,
+      "PR_AUC": 0.695
+    },
+    {
+      "Fitur": "Genus",
+      "Model": "Random Forest",
+      "Accuracy": 0.6949,
+      "Precision_cancer": 0.7143,
+      "Recall_cancer": 0.4167,
+      "F1_cancer": 0.5263,
+      "Specificity": 0.8857,
+      "Balanced_accuracy": 0.6512,
+      "ROC_AUC": 0.7345,
+      "PR_AUC": 0.7044
+    },
+    {
+      "Fitur": "k-mer",
+      "Model": "Logistic Regression",
+      "Accuracy": 0.6949,
+      "Precision_cancer": 0.625,
+      "Recall_cancer": 0.625,
+      "F1_cancer": 0.625,
+      "Specificity": 0.7429,
+      "Balanced_accuracy": 0.6839,
+      "ROC_AUC": 0.7821,
+      "PR_AUC": 0.76
+    },
+    {
+      "Fitur": "k-mer",
+      "Model": "Random Forest",
+      "Accuracy": 0.7119,
+      "Precision_cancer": 0.7692,
+      "Recall_cancer": 0.4167,
+      "F1_cancer": 0.5405,
+      "Specificity": 0.9143,
+      "Balanced_accuracy": 0.6655,
+      "ROC_AUC": 0.756,
+      "PR_AUC": 0.7444
+    },
+    {
+      "Fitur": "-",
+      "Model": "Dummy (baseline)",
+      "Accuracy": 0.5932,
+      "Precision_cancer": 0.0,
+      "Recall_cancer": 0.0,
+      "F1_cancer": 0.0,
+      "Specificity": 1.0,
+      "Balanced_accuracy": 0.5,
+      "ROC_AUC": 0.5,
+      "PR_AUC": 0.4068
+    }
+  ],
+  "kfold_terbaik": {
+    "Fitur": "k-mer",
+    "Model": "Random Forest",
+    "CV_F1_mean": 0.5544,
+    "CV_F1_std": 0.1238,
+    "CV_ROC_AUC_mean": 0.7698,
+    "CV_ROC_AUC_std": 0.0651,
+    "CV_Accuracy_mean": 0.7222,
+    "CV_Balanced_acc_mean": 0.6786
+  },
+  "genus_teratas_RF": [
+    "Porphyromonas",
+    "Peptostreptococcus",
+    "Parvimonas",
+    "Fusobacterium",
+    "Evtepia",
+    "Merdibacter",
+    "Agathobaculum/Butyricicoccus",
+    "Gemmiger",
+    "Collinsella",
+    "Anaerostipes"
+  ],
+  "validasi_silang_penulis": {
+    "shannon_spearman": 0.8063,
+    "otu_best_match_median": 0.8845
+  },
+  "kontrol_teknis_QC_AUC": 0.6218,
+  "sensitivitas_batch": [
+    {
+      "Fitur": "ESV",
+      "Model": "Logistic Regression",
+      "AUC_semua_sampel": 0.7138,
+      "AUC_tanpa_sampel_bertag": 0.6906,
+      "AUC_menebak_tag_di_cancer": 0.5201
+    },
+    {
+      "Fitur": "ESV",
+      "Model": "Random Forest",
+      "AUC_semua_sampel": 0.6798,
+      "AUC_tanpa_sampel_bertag": 0.7024,
+      "AUC_menebak_tag_di_cancer": 0.4928
+    },
+    {
+      "Fitur": "Genus",
+      "Model": "Logistic Regression",
+      "AUC_semua_sampel": 0.745,
+      "AUC_tanpa_sampel_bertag": 0.7614,
+      "AUC_menebak_tag_di_cancer": 0.4459
+    },
+    {
+      "Fitur": "Genus",
+      "Model": "Random Forest",
+      "AUC_semua_sampel": 0.765,
+      "AUC_tanpa_sampel_bertag": 0.7604,
+      "AUC_menebak_tag_di_cancer": 0.5669
+    },
+    {
+      "Fitur": "k-mer",
+      "Model": "Logistic Regression",
+      "AUC_semua_sampel": 0.7513,
+      "AUC_tanpa_sampel_bertag": 0.7377,
+      "AUC_menebak_tag_di_cancer": 0.5554
+    },
+    {
+      "Fitur": "k-mer",
+      "Model": "Random Forest",
+      "AUC_semua_sampel": 0.7698,
+      "AUC_tanpa_sampel_bertag": 0.758,
+      "AUC_menebak_tag_di_cancer": 0.3853
+    }
+  ]
+}
